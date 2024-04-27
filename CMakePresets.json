@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "DevDebug",
+      "description": "Debug build with developer settings",
+      "hidden": false,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+        "CMAKE_VERBOSE_MAKEFILE": "YES"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "DevDebug",
+      "description": "Debug build with developer settings",
+      "hidden": false,
+      "configurePreset": "DevDebug"
+    }
+  ]
+}
