@@ -10,7 +10,6 @@
       "name": "DevDebug",
       "description": "Debug build with developer settings",
       "hidden": false,
-      "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
