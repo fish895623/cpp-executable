@@ -1,0 +1,21 @@
+# example of github actions
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: init
+        run: cmake --preset DevDebug
+
+      - name: build
+        run: cmake --build --preset DevDebug
